@@ -35,5 +35,4 @@ void main(void)
     printf("El maximo es:%d\n" , max);
     printf("El minimo es:%d\n" , min);
     printf("El promedio es:%.2f" , promedio);
-
 }
