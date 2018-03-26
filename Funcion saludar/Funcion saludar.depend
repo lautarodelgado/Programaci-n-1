@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1522162490 source:c:\users\alumno\desktop\funcion saludar\main.c
+	<stdio.h>
+	<stdlib.h>
+
