@@ -58,7 +58,7 @@ int main()
         //promedio notas
         acumuladorNotas = acumuladorNotas + nota;
         //nota y sexo minimo
-        if(contador==1)
+        if(contador==0)
         {
             notaMinima = nota;
             sexoMinimo = sexo;
@@ -77,7 +77,7 @@ int main()
             varonesNotaMayorSeis++;
         }
         //d-
-        if(contador==1)
+        if(contador==0)
         {
             masJoven = edad;
             notaMasJoven = nota;
@@ -96,9 +96,6 @@ int main()
         if(sexo == 'f')
         {
             contadorMujeres++;
-        }
-        if(contadorMujeres == 1)
-        {
             edadPrimerMujer = edad;
             notaPrimerMujer = nota;
         }
@@ -116,7 +113,10 @@ int main()
     }
     else
     {
-        printf("\nLa edad de la primer mujer ingresada es %d y su nota es %d" , edadPrimerMujer , notaPrimerMujer);
+        if(contadorMujeres > 0)
+        {
+            printf("\nLa edad de la primer mujer ingresada es %d y su nota es %d" , edadPrimerMujer , notaPrimerMujer);
+        }
     }
     return 0;
 }
