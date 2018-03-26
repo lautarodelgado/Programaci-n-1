@@ -5,7 +5,10 @@ int sumar(int , int);
 
 int main()
 {
-    printf("La suma es %d\n", sumar(5 , 7));
+    int x=5;
+    int y=7;
+
+    printf("La suma es %d\n", sumar(x , y));
 
     return 0;
 }
