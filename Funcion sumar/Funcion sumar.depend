@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1522164316 source:c:\users\alumno\desktop\funcion sumar\main.c
+	<stdio.h>
+	<stdlib.h>
+	"baus.h"
+
+1522164268 c:\users\alumno\desktop\funcion sumar\baus.h
+
