@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1523275870 source:c:\users\alumno\desktop\vectores funcion de repaso\funciones.c
+
+1523276035 source:c:\users\alumno\desktop\vectores funcion de repaso\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1523275597 c:\users\alumno\desktop\vectores funcion de repaso\funciones.h
+
