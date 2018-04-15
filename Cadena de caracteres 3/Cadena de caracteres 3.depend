@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1523819089 source:c:\users\monica\desktop\nueva carpeta\cadena de caracteres 3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
