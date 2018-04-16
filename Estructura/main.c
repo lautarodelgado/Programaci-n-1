@@ -14,12 +14,17 @@ typedef struct
 
 int main()
 {
-    eEmpleado unEmpleado;
+    eEmpleado unEmpleado; //se puede harcodear pero en el mismo orden en el que esta la estructura
 
     unEmpleado.legajo = 1234;
     strcpy(unEmpleado.nombre , "Juan");
     unEmpleado.sueldo = 50000.50;
     unEmpleado.sexo = 'f';
+
+    /*
+    printf("ingrese legajo");
+    scanf("%d" , &unEmpleado.legajo);
+    */
 
     printf("Nombre: %s\n" , unEmpleado.nombre);
     printf("Legajo: %d\n" , unEmpleado.legajo);
