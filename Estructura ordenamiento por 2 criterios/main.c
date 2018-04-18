@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define CANT 3
 
 typedef struct
 {
@@ -18,8 +19,33 @@ typedef struct
 
 int main()
 {
-    eEmpleado emp;
+    int i;
+    int j;
+    eEmpleado emp[CANT];
+    eEmpleado aux; //porque el auxiliar tiene que ser el mismo tipo de dato, es decir, estructura
+
+    for(i = 0 ; i < CANT - 1 ; i++)
+    {
+        for(j = i+1 ; j < CANT ; j++)
+        {
+            if(emp[i].sueldo < emp[j].sueldo)
+            {
+                aux = emp[i];
+                emp[i] = emp[j];
+                emp[j] = aux;
+            }
+        }
+    }
+
+    /*
     emp.nombre;
+    emp.legajo;
+    emp.sueldo;
+    emp.sexo;
+    emp.fn.dia;
+    emp.fn.mes;
+    emp.fn.anio;
+    */
     printf("Hello world!\n");
     return 0;
 }
