@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #define CANT 3
 
 typedef struct
@@ -22,6 +23,7 @@ int main()
     int i;
     int j;
     eEmpleado emp[CANT];
+
     eEmpleado aux; //porque el auxiliar tiene que ser el mismo tipo de dato, es decir, estructura
 
     for(i = 0 ; i < CANT - 1 ; i++)
@@ -33,6 +35,18 @@ int main()
                 aux = emp[i];
                 emp[i] = emp[j];
                 emp[j] = aux;
+            }
+            else
+            {
+                if(emp[i].sueldo == emp[j].sueldo)
+                {
+                    if(strcmp(emp[i].nombre , emp[j].nombre) > 0)
+                    {
+                        aux = emp[i];
+                        emp[i] = emp[j];
+                        emp[j] = aux;
+                    }
+                }
             }
         }
     }
