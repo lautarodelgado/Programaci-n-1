@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1524514484 source:c:\users\pcx\desktop\alta - baja\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1524516079 c:\users\pcx\desktop\alta - baja\funciones.h
+
+1524519410 source:c:\users\pcx\desktop\alta - baja\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
