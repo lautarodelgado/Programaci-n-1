@@ -48,42 +48,7 @@ int buscarLibre(eEmpleado emp[] , int tam)
 }
 
 
-void alta(eEmpleado emp[], int tam)
-{
-    int i;
 
-    for(i=0; i<tam; i++)
-    {
-        if(emp[i].isEmpty == 1)
-        {
-            printf("Legajo: ");
-            scanf("%d", &emp[i].legajo);
-
-            printf("Nombre: ");
-            fflush(stdin);
-            scanf("%s", emp[i].nombre);
-
-            printf("Salario: ");
-            scanf("%f", &emp[i].sueldo);
-
-            printf("Sexo: ");
-            scanf("%c" , &emp[i].sexo);
-
-            printf("Dia: ");
-            scanf("%d", &emp[i].fechaIngreso.dia);
-
-            printf("Mes: ");
-            scanf("%d", &emp[i].fechaIngreso.mes);
-
-            printf("Año: ");
-            scanf("%d", &emp[i].fechaIngreso.anio);
-
-            emp[i].isEmpty = 0;
-
-            break;
-        }
-    }
-}
 
 
 void listar(eEmpleado emp[], int tam)
@@ -106,18 +71,66 @@ int buscarEmpleado(eEmpleado emp[] , int tam , int legajo)
 {
     int i;
     int legajoIngresado;
-    int legajoEstado = -1;
+    int legajoIndice = -1;
 
-    printf("Ingrese un legajo a buscar: ");
-    scanf("%d" , &legajoIngresado);
+    //printf("Ingrese un legajo a buscar: ");
+    //scanf("%d" , &legajoIngresado);
 
     for(i=0 ; i < tam ; i++)
     {
-        if(legajoIngresado == emp[i].legajo)
+        if(emp[i].legajo == emp[i].legajo)
         {
-            legajoEstado = i;
+            legajoIndice = i;
             break;
         }
     }
-    return legajoEstado;
+    return legajoIndice;
+}
+
+
+void alta(eEmpleado emp[], int tam)
+{
+    int i;
+    int libre;
+
+    for(i=0 ; i < tam ; i++)
+    {
+        libre = buscarLibre(, 50);
+    }
+
+    /*
+    for(i=0; i<tam; i++)
+    {
+        if(emp[i].isEmpty == 1)
+        {
+
+            printf("Legajo: ");
+            scanf("%d", &emp[i].legajo);
+
+            printf("Nombre: ");
+            fflush(stdin);
+            scanf("%s", emp[i].nombre);
+
+            printf("Salario: ");
+            scanf("%f", &emp[i].sueldo);
+
+            printf("Sexo: ");
+            fflush(stdin);
+            scanf("%c" , &emp[i].sexo);
+
+            printf("Dia: ");
+            scanf("%d", &emp[i].fechaIngreso.dia);
+
+            printf("Mes: ");
+            scanf("%d", &emp[i].fechaIngreso.mes);
+
+            printf("Año: ");
+            scanf("%d", &emp[i].fechaIngreso.anio);
+
+            emp[i].isEmpty = 0;
+
+            break;
+        }
+    }
+    */
 }

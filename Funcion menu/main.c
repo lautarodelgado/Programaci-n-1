@@ -7,6 +7,7 @@ int main()
     char letra = 's';
     eEmpleado gente[50];
 
+
     inicializarEmpleados(gente , 50);
 
     do
@@ -14,6 +15,9 @@ int main()
         switch(menu())
         {
         case 1:
+
+            alta(gente ,50);
+
             system("pause");
             break;
         case 2:
