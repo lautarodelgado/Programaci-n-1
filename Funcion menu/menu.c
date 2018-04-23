@@ -32,8 +32,8 @@ void inicializarEmpleados(eEmpleado emp[] , int tam)
 
 int buscarLibre(eEmpleado emp[] , int tam)
 {
-    int i = -1;
-    int indiceVacio;
+    int i;
+    int indiceVacio = -1;
 
     for(i=0 ; i < tam ; i++)
     {
@@ -99,4 +99,25 @@ void listar(eEmpleado emp[], int tam)
             printf("%d\t%s\t%c\t\t\t%d/%d/%d\t%.2f\n", emp[i].legajo, emp[i].nombre, emp[i].sexo, emp[i].fechaIngreso.dia, emp[i].fechaIngreso.mes, emp[i].fechaIngreso.anio, emp[i].sueldo);
         }
     }
+}
+
+
+int buscarEmpleado(eEmpleado emp[] , int tam , int legajo)
+{
+    int i;
+    int legajoIngresado;
+    int legajoEstado = -1;
+
+    printf("Ingrese un legajo a buscar: ");
+    scanf("%d" , &legajoIngresado);
+
+    for(i=0 ; i < tam ; i++)
+    {
+        if(legajoIngresado == emp[i].legajo)
+        {
+            legajoEstado = i;
+            break;
+        }
+    }
+    return legajoEstado;
 }

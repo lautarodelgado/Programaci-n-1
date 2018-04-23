@@ -14,7 +14,6 @@ int main()
         switch(menu())
         {
         case 1:
-            printf("\nlala\n\n");
             system("pause");
             break;
         case 2:

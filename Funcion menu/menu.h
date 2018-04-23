@@ -32,6 +32,8 @@ void alta(eEmpleado[], int);
 
 void listar(eEmpleado[], int);
 
+int buscarEmpleado(eEmpleado[] , int , int);
+
 
 
 
