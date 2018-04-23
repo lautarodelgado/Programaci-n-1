@@ -28,6 +28,10 @@ void inicializarEmpleados(eEmpleado[] , int);
 
 int buscarLibre(eEmpleado[] , int);
 
+void alta(eEmpleado[], int);
+
+void listar(eEmpleado[], int);
+
 
 
 
