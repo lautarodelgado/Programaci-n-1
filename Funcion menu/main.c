@@ -5,6 +5,9 @@
 int main()
 {
     char letra = 's';
+    eEmpleado gente[50];
+
+    inicializarEmpleados(gente , 50);
 
     do
     {
