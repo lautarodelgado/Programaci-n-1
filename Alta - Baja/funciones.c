@@ -71,6 +71,7 @@ void alta(eEmpleado emp[], int tam)
         if(esta != -1)
         {
             printf("Dado de alta.\n");
+            //listarUno(emp[esta]);
             //break;
         }
         else
@@ -208,6 +209,20 @@ void listar(eEmpleado emp[], int tam)
 }
 
 
+/*
+void listarUno(eEmpleado emp[])
+{
+    eEmpleado nuevoEmpleado;
+    printf("Legajo:\tNombre:\tSexo:\tFechaIng:\tSalario:\n\n");
+    if(nuevoEmpleado.isEmpty == 0)
+    {
+        printf("%d\t%s\t%c\t%d/%d/%d\t\t%.2f\n", nuevoEmpleado.legajo, nuevoEmpleado.nombre, nuevoEmpleado.sexo, nuevoEmpleado.fechaIngreso.dia, nuevoEmpleado.fechaIngreso.mes, nuevoEmpleado.fechaIngreso.anio, nuevoEmpleado.sueldo);
+    }
+
+}
+*/
+
+
 int buscarEmpleado(eEmpleado emp[] , int tam , int legajo)
 {
     int i;
@@ -226,4 +241,27 @@ int buscarEmpleado(eEmpleado emp[] , int tam , int legajo)
         }
     }
     return legajoIndice;
+}
+
+
+void bajaPorLegajo(eEmpleado emp[] , int tam)
+{
+    eEmpleado nuevoEmpleado;
+    int legajo;
+    int legajoBaja = -1;
+    printf("Legajo del empleado a dar de baja: ");
+    scanf("%d" , &legajo);
+
+    legajoBaja = buscarEmpleado(emp , tam , legajo);
+
+    if(legajoBaja == -1)
+    {
+        printf("El legaja %d nunca fue ingresado en el sistema," , legajo);
+    }
+    else
+    {
+        nuevoEmpleado.isEmpty = 1;
+        emp[legajoBaja] = nuevoEmpleado;
+        printf("Baja exitosa.");
+    }
 }

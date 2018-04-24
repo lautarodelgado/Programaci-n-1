@@ -19,6 +19,7 @@ int main()
             system("pause");
             break;
         case 2:
+            bajaPorLegajo(gente , 3);
             system("pause");
             break;
         case 3:

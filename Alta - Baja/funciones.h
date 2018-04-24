@@ -31,8 +31,12 @@ int buscarLibre(eEmpleado[] , int);
 void alta(eEmpleado[], int);
 //IMPRIME LOS DATOS DE LOS EMPLEADOS
 void listar(eEmpleado[], int);
+
+void listarUno(eEmpleado);
 //BUSCA UN EMPLEADO POR NUMERO DE LEGAJO
 int buscarEmpleado(eEmpleado[] , int , int);
+//BAJA:
+void bajaPorLegajo(eEmpleado[] , int);
 
 
 
