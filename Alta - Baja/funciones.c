@@ -51,12 +51,59 @@ int buscarLibre(eEmpleado emp[] , int tam)
 
 void alta(eEmpleado emp[], int tam)
 {
-    int i;
-    int libre;
+    eEmpleado nuevoEmplead;
+    int indice;
     int legajo;
-    int leg;
+    int esta;
 
-    for(i=0 ; i < tam ; i++)
+    indice = buscarLibre(emp , tam);
+
+    if(indice == -1)
+    {
+        printf("LLENO.");
+    }
+    else
+    {
+        printf("LEGAJO: ");
+        scanf("%d" , &legajo);
+
+        esta = buscarEmpleado(emp , tam , legajo);
+        if(esta != -1)
+        {
+            printf("Dado de alta.\n");
+            //break;
+        }
+        else
+        {
+            nuevoEmplead.isEmpty = 0;
+            nuevoEmplead.legajo = legajo;
+
+            printf("NOMBRE: ");
+            fflush(stdin);
+            scanf("%[^\n]" , nuevoEmplead.nombre);
+
+            printf("SEXO:");
+            fflush(stdin);
+            scanf("%c" , &nuevoEmplead.sexo);
+
+            printf("SUELDO: ");
+            scanf("%f" , &nuevoEmplead.sueldo);
+
+            printf("DIA: ");
+            scanf("%d" , &nuevoEmplead.fechaIngreso.dia);
+
+            printf("MES: ");
+            scanf("%d" , &nuevoEmplead.fechaIngreso.mes);
+
+            printf("ANIO: ");
+            scanf("%d" , &nuevoEmplead.fechaIngreso.anio);
+
+            emp[indice] = nuevoEmplead;
+
+        }
+    }
+
+    /*for(i=0 ; i < tam ; i++)
     {
         libre = buscarLibre(emp , tam);
         if(libre == -1)
@@ -77,6 +124,9 @@ void alta(eEmpleado emp[], int tam)
                 }
                 else
                 {
+                    emp[i].isEmpty = 0;
+                    emp[i].legajo = legajo;
+
 
                     printf("Nombre: ");
                     fflush(stdin);
@@ -97,9 +147,6 @@ void alta(eEmpleado emp[], int tam)
 
                     printf("Año: ");
                     scanf("%d", &emp[i].fechaIngreso.anio);
-
-                    emp[i].isEmpty = 0;
-                    emp[i].legajo = legajo;
                     break;
                 }
             }
