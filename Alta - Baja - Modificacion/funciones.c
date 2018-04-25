@@ -216,10 +216,10 @@ void listar(eEmpleado emp[], int tam)
 void listarUno(eEmpleado emp)
 {
 
-    printf("Legajo:\tNombre:\tSexo:\tFechaIng:\tSalario:\n\n");
+    printf("Legajo:\tNombre:\tSexo:\tFechaIng:\tSalario:\tID:\n\n");
     if(emp.isEmpty == 0)
     {
-        printf("%d\t%s\t%c\t%d/%d/%d\t\t%.2f\n", emp.legajo, emp.nombre, emp.sexo, emp.fechaIngreso.dia, emp.fechaIngreso.mes, emp.fechaIngreso.anio, emp.sueldo);
+        printf("%d\t%s\t%c\t%d/%d/%d\t\t%.2f\t\t%d\n", emp.legajo, emp.nombre, emp.sexo, emp.fechaIngreso.dia, emp.fechaIngreso.mes, emp.fechaIngreso.anio, emp.sueldo , emp.idSector);
     }
 
 }
@@ -323,4 +323,24 @@ void hardCode(eSector sectores[]){
     */
 }
 
+/*
+int menu()
+{
+    int opcion;
+
+    system("cls");
+    printf("LEGAJO:");
+    printf("NOMBRE:");
+    printf("SEXO:");
+    printf("SUELDO:");
+    printf("DIA:");
+    printf("MES:");
+    printf("ANIO:");
+    printf("ID:");
+
+    printf("Elija lo que quiere cambiar: ");
+    scanf("%d" , &opcion);
+}
+
+*/
 

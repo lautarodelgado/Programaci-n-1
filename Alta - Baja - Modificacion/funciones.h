@@ -30,6 +30,8 @@ typedef struct
 //FUNCIONES:
 //GENERA MENU:
 int menu();
+
+int menuModificacion();
 //INICIALIZA INDICES EN 1 (PARA QUE ESTEN VACIOS)
 void inicializarEmpleados(eEmpleado[] , int);
 //BUSCA UN INDICE VACIO
