@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1524661214 source:c:\users\alumno\desktop\alta - baja - modificacion\main.c
+1524662651 source:c:\users\alumno\desktop\alta - baja - modificacion\main.c
 	<stdio.h>
 	<stdlib.h>
 	"funciones.h"
 
-1524661214 c:\users\alumno\desktop\alta - baja - modificacion\funciones.h
+1524661909 c:\users\alumno\desktop\alta - baja - modificacion\funciones.h
 
-1524661388 source:c:\users\alumno\desktop\alta - baja - modificacion\funciones.c
+1524662686 source:c:\users\alumno\desktop\alta - baja - modificacion\funciones.c
 	<stdio.h>
 	<stdlib.h>
 	"funciones.h"

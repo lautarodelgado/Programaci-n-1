@@ -269,3 +269,58 @@ void bajaPorLegajo(eEmpleado emp[] , int tam)
     }
 }
 
+
+void hardCode(eSector sectores[]){
+    eSector nuevoSector;
+
+    nuevoSector.id = 1;
+    strcpy(nuevoSector.descripcion, "RRHH");
+    nuevoSector.isEmpty = 0;
+    sectores[0] = nuevoSector;
+
+    nuevoSector.id = 2;
+    strcpy(nuevoSector.descripcion, "Sistemas");
+    nuevoSector.isEmpty = 0;
+    sectores[1] = nuevoSector;
+
+    nuevoSector.id = 3;
+    strcpy(nuevoSector.descripcion, "Administracion.");
+    nuevoSector.isEmpty = 0;
+    sectores[2] = nuevoSector;
+
+    nuevoSector.id = 4;
+    strcpy(nuevoSector.descripcion, "Compras.");
+    nuevoSector.isEmpty = 0;
+    sectores[3] = nuevoSector;
+
+    nuevoSector.id = 5;
+    strcpy(nuevoSector.descripcion, "Deposito.");
+    nuevoSector.isEmpty = 0;
+    sectores[4] = nuevoSector;
+
+
+
+    /*
+    sectores[0].id = 1;
+    strcpy(sectores[0].descripcion, "RRHH");
+    sectores[0].isEmpty = 0;
+
+    sectores[1].id = 2;
+    strcpy(sectores[1].descripcion, "Sistemas");
+    sectores[1].isEmpty = 0;
+
+    sectores[2].id = 3;
+    strcpy(sectores[2].descripcion, "Administracion");
+    sectores[2].isEmpty = 0;
+
+    sectores[3].id = 4;
+    strcpy(sectores[3].descripcion, "Compras");
+    sectores[3].isEmpty = 0;
+
+    sectores[4].id = 5;
+    strcpy(sectores[4].descripcion, "Deposito");
+    sectores[4].isEmpty = 0;
+    */
+}
+
+
