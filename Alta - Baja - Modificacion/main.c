@@ -18,7 +18,7 @@ int main()
         printf("%d\t%s\t\t\n" , sectores[i].id , sectores[i].descripcion);
         //system("pause");
     }
-    //system("pause");
+    system("pause");
 
 
     do

@@ -71,7 +71,7 @@ void alta(eEmpleado emp[], int tam)
         if(esta != -1)
         {
             printf("Dado de alta.\n");
-            //listarUno(emp[esta]);
+            listarUno(emp[esta]);
             //break;
         }
         else
@@ -212,18 +212,18 @@ void listar(eEmpleado emp[], int tam)
 }
 
 
-/*
-void listarUno(eEmpleado emp[])
+
+void listarUno(eEmpleado emp)
 {
-    eEmpleado nuevoEmpleado;
+
     printf("Legajo:\tNombre:\tSexo:\tFechaIng:\tSalario:\n\n");
-    if(nuevoEmpleado.isEmpty == 0)
+    if(emp.isEmpty == 0)
     {
-        printf("%d\t%s\t%c\t%d/%d/%d\t\t%.2f\n", nuevoEmpleado.legajo, nuevoEmpleado.nombre, nuevoEmpleado.sexo, nuevoEmpleado.fechaIngreso.dia, nuevoEmpleado.fechaIngreso.mes, nuevoEmpleado.fechaIngreso.anio, nuevoEmpleado.sueldo);
+        printf("%d\t%s\t%c\t%d/%d/%d\t\t%.2f\n", emp.legajo, emp.nombre, emp.sexo, emp.fechaIngreso.dia, emp.fechaIngreso.mes, emp.fechaIngreso.anio, emp.sueldo);
     }
 
 }
-*/
+
 
 
 int buscarEmpleado(eEmpleado emp[] , int tam , int legajo)
