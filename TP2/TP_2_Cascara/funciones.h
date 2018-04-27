@@ -14,6 +14,14 @@ void inicializarLibre(ePersona [] , int tam);
 
 void agregarPersona(ePersona[] , int);
 
+void mostrarDato(ePersona);
+
+void mostrarPersonas(ePersona[] , int tam);
+
+void ordenarPorNombre(ePersona[] , int tam);
+
+void borrarPersona(ePersona[] , int);
+
 
 
 /**

@@ -1,5 +1,6 @@
 #include "funciones.h"
 #include <stdio.h>
+#include <string.h>
 
 void inicializarLibre(ePersona emp[] , int tam)
 {
@@ -42,6 +43,49 @@ int buscarPorDni(ePersona per[] , int tam , int dni)
     return indiceDni;
 }
 
+void mostrarDato(ePersona per)
+{
+    printf("DNI:\tNOMBRE:\tEDAD:\n");
+    printf("%d\t%s\t%d\n" , per.dni ,per.nombre , per.edad);
+}
+
+
+void ordenarPorNombre(ePersona per[] , int tam)
+{
+    int i;
+    int j;
+    ePersona aux;
+
+    printf("DNI:\tNOMBRE:\tEDAD:\n");
+    for(i=0 ; i < tam-1 ; i++)
+    {
+        for(j=i+1 ; j < tam ; j++)
+        {
+            if((strcmp(per[i].nombre , per[j].nombre) > 0))
+            {
+                aux = per[i];
+                per[i] = per[j];
+                per[j] = aux;
+            }
+        }
+    }
+}
+
+
+void mostrarPersonas(ePersona per[] , int tam)
+{
+    ordenarPorNombre(per , tam);
+    int i;
+
+    for(i=0 ; i < tam ; i++)
+    {
+        if(per[i].estado == 1)
+        {
+            printf("%d\t%s\t%d\n" , per[i].dni , per[i].nombre , per[i].edad);
+        }
+    }
+}
+
 
 void agregarPersona(ePersona per[] , int tam)
 {
@@ -66,7 +110,8 @@ void agregarPersona(ePersona per[] , int tam)
 
         if(dniExistente != -1)
         {
-            printf("\nEl DNI %d ya fue cargado en el sistema." , dni);
+            printf("\nEl DNI %d ya fue cargado en el sistema.\n" , dni);
+            mostrarDato(per[dniExistente]);
         }
         else
         {
@@ -82,8 +127,50 @@ void agregarPersona(ePersona per[] , int tam)
 
             per[indice] = nuevaPersona;
         }
-        system("\npause");
+        system("\npause\n");
+    }
+}
+
+void borrarPersona(ePersona per[] , int tam)
+{
+    int dni;
+    char respuesta;
+    int dniExistente;
+    ePersona nuevaPersona;
+
+    printf("Ingrese el DNI de la persona que quiere borrar: ");
+    scanf("%d" , &dni);
+
+    dniExistente = buscarPorDni(per , tam , dni);
+    if(dniExistente == -1)
+    {
+        printf("EL DNI %d nunca fue ingresado en el sistema.\n" , dni);
+        system("pause");
+    }
+    else
+    {
+        printf("Esta seguro que desea borrar los datos de la siguiente persona? [s/n]\n");
+        mostrarDato(per[dniExistente]);
+        fflush(stdin);
+        scanf("%c" , &respuesta);
+        while(respuesta != 'n' && respuesta != 's')
+        {
+            printf("Error. Ingrese s/n.");
+            fflush(stdin);
+            scanf("%c" , &respuesta);
+        }
+        if(respuesta == 'n')
+        {
+            printf("Baja cancelada.\n");
+            system("pause");
+        }
+        else
+        {
+            nuevaPersona.estado = 0;
+            per[dniExistente].estado = nuevaPersona.estado;
+            printf("Baja exitosa.");
+            system("pause");
+        }
     }
 
-    //scanf("%d" , &nuevaPersona.dni);
 }

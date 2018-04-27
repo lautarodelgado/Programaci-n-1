@@ -1,15 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "funciones.h"
+#define CANT 20
 
 
 int main()
 {
-    ePersona persona[2];
+    ePersona persona[CANT];
     char seguir='s';
     int opcion=0;
 
-    inicializarLibre(persona , 2);
+    inicializarLibre(persona , CANT);
 
     while(seguir=='s')
     {
@@ -26,11 +27,14 @@ int main()
         switch(opcion)
         {
             case 1:
-                agregarPersona(persona , 2);
+                agregarPersona(persona , CANT);
                 break;
             case 2:
+                borrarPersona(persona , CANT);
                 break;
             case 3:
+                mostrarPersonas(persona , CANT);
+                system("pause");
                 break;
             case 4:
                 break;
