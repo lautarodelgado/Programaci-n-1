@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1525878543 source:d:\delgado_lautaro_1a\main.c
+	<stdio.h>
+	<stdlib.h>
+	"producto.h"
+
+1525878452 d:\delgado_lautaro_1a\producto.h
+
+1525878543 source:d:\delgado_lautaro_1a\producto.c
+	"producto.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
